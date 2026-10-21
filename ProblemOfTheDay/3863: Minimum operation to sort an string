@@ -1,0 +1,42 @@
+class Solution {
+    public int minOperations(String s) {
+
+        if(s.equals(sort(s))){
+            return 0;
+        }
+         if(s.length() == 2){
+            return -1;
+        }
+        char min = s.charAt(0);
+        char max = s.charAt(0);
+       for(int i = 0;i<s.length();i++){
+           min =(char) Math.min(min,s.charAt(i));
+           max =(char) Math.max(max,s.charAt(i));
+       }
+     
+      if (s.charAt(0) == max && s.charAt(s.length() - 1) == min) {
+    if (s.indexOf(min) != s.lastIndexOf(min) ||
+        s.indexOf(max) != s.lastIndexOf(max)) {
+        return 2;
+    }
+    return 3;
+}
+
+if (s.charAt(0) == min || s.charAt(s.length() - 1) == max) {
+    return 1;
+}
+
+return 2;
+       
+    }
+
+  public String sort(String s){
+    char[] arr = s.toCharArray();
+
+     Arrays.sort(arr);
+
+     String ans = new String(arr);
+
+     return ans;
+  }
+}
