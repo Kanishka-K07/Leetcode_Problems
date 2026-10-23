@@ -1,0 +1,17 @@
+class Solution {
+    public int singleNonDuplicate(int[] nums) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i = 0;i<nums.length;i++){
+            int freq = map.getOrDefault(nums[i],0) + 1;
+            map.put(nums[i],freq);
+        }
+        
+      
+        for(int i = 0;i<nums.length;i++){
+           if(map.get(nums[i]) == 1){
+            return nums[i];
+           }
+        }
+        return -1;
+    }
+}
