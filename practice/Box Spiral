@@ -1,0 +1,17 @@
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int n = 5;
+		for(int row = 1-n;row<n;row++){
+		    for(int col = 1-n;col<n;col++){
+		        if(Math.abs(col) > Math.abs(row)){
+		            System.out.print(Math.abs(col) + 1);
+		        }else{
+		            System.out.print(Math.abs(row) + 1);
+		        }
+		    }
+		    System.out.println();
+		}
+	}
+}
