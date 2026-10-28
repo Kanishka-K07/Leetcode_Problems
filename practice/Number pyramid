@@ -1,0 +1,25 @@
+package Example;
+import java.util.*;
+public class example {
+	
+		public static void main(String[] args) {
+		    Scanner sc = new Scanner(System.in);
+		    int n = sc.nextInt();
+		    
+		    for(int row = 1;row<=n;row++){
+		        //int rowChange = row > n? 2*n-row :row;
+		        for(int space = 1;space<=n-row;space++){
+		            System.out.print("  ");
+		        }
+		         for(int star = 1;star<=row;star++){
+		            System.out.print(star +" ");
+		        }
+		         for (int col = row-1; col >= 1; col--) {
+	                System.out.print(col + " ");
+		            }
+		        System.out.println();
+		       
+		    }
+			
+		}
+	}
