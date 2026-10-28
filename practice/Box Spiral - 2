@@ -1,0 +1,25 @@
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int n = 5;
+	
+		for(int row = 1;row<=2*n-1;row++){
+		    int RowChange = row>n? 2*n - row:row;
+		    for(int col = 1;col<=RowChange;col++){
+		        System.out.print(n-col+1);
+		    }
+		    for(int col = 1;col<2*(n-RowChange);col++){
+		        System.out.print(n-RowChange+1);
+		    }
+		   
+		    for(int col = 1;col<=RowChange;col++){
+		        if(n-RowChange+col != 1)
+		        System.out.print(n-RowChange+col);
+		    }
+		    System.out.println();
+		}
+	}
+}
