@@ -25,3 +25,27 @@ public class Main{
 	    }
 	}
 }
+                                           (Method 2)
+
+
+import java.util.*;
+public class Main{
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	    int pow = 1;
+	    int len = (int)(Math.log10(n) + 1);
+	    for(int i = 1;i<len;i++){
+	        pow = pow * 10;
+	    }
+	    int first=0;
+	    while(pow>0){
+	        first = (n/pow)%10;
+	        if(first==2||first==3||first == 5||first==7){
+	            System.out.println(first);
+	        }
+	        pow = pow/10;
+	    }
+	}
+}
