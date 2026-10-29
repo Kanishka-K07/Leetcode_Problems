@@ -1,0 +1,85 @@
+                                                        // Method 1
+import java.util.*;
+public class Main{
+    
+   static void isPrime(int n){
+       for(int i = 2;i<n;i++){
+           if(n%i==0){
+               System.out.print("Not Prime");
+               return;
+           }
+       }
+        System.out.print("Prime");
+   }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	   
+	    isPrime(n);
+	}
+} 
+                                                      method 2
+
+import java.util.*;
+public class Main{
+    
+   static void isPrime(int n){
+       for(int i = 2;i<=n/2;i++){
+           if(n%i==0){
+               System.out.print("Not Prime");
+               return;
+           }
+       }
+        System.out.print("Prime");
+   }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	   
+	    isPrime(n);
+	}
+}
+
+                                           method 3
+
+import java.util.*;
+public class Main{
+    
+   static void isPrime(int n){
+       for(int i = 2;i<=Math.sqrt(n);i++){
+           if(n%i==0){
+               System.out.print("Not Prime");
+               return;
+           }
+       }
+        System.out.print("Prime");
+   }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	   
+	    isPrime(n);
+	}
+}
+
+                            method 4
+
+import java.util.*;
+public class Main{
+    
+   static void isPrime(int n){
+       for(int i = 2;i*i<=n;i++){
+           if(n%i==0){
+               System.out.print("Not Prime");
+               return;
+           }
+       }
+        System.out.print("Prime");
+   }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+	   
+	    isPrime(n);
+	}
+}
