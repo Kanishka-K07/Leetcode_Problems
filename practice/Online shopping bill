@@ -1,0 +1,70 @@
+An online shopping company calculates the final order amount based on the purchase amount.
+
+The company provides discounts based on the order value and charges delivery fees based on the same amount.
+
+Your task is to calculate the final amount payable by the customer.
+Discount rules
+- Order amount below ₹1,000: No discount.
+- Order amount from ₹1,000 to ₹2,999: 5% discount.
+- Order amount from ₹3,000 to ₹4,999: 10% discount.
+- Order amount ₹5,000 and above: 15% discount.
+Delivery charges
+- Order amount below ₹1,000: ₹100 delivery charge.
+- Order amount from ₹1,000 to ₹2,999: ₹50 delivery charge.
+- Order amount ₹3,000 and above: Free delivery.
+
+Example 1
+
+Input:
+800
+
+
+Output:
+Original Amount = 800.00
+Discount = 0.00
+Delivery Charge = 100.00
+Final Amount = 900.00
+
+
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int p = sc.nextInt();
+	        double dis = 0;
+	        double del = 0;
+	        double total = 0;
+	    if(p<1000){
+	         dis = 0;
+	         del = 100;
+	         total = p - dis + del;
+	        //System.out.printf("Rs.%.2f",total);
+	    }else if(p>=1000 && p<3000){
+	         dis = p * 5.0/100;
+	         del = 50;
+	         total = p - dis + del;
+	    }else if(p>=3000 && p<5000){
+	       
+	         dis = p * 10.0/100;
+	         del = 0;
+	         total = p - dis + del;
+	    }else if(p>=5000){
+	         dis = p * 15.0/100;
+	         del = 0;
+	         total = p - dis + del;
+	    }else{
+	        System.out.printf("Invalid");
+	    }
+	    System.out.println("Original amount =" +p);
+	    System.out.println("Discount =" +dis);
+	    System.out.println("Delivery Charge =" +del);
+	    System.out.println("Final Price " +total);
+	    
+	    
+		
+	}
+}
