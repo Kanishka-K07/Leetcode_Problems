@@ -1,0 +1,24 @@
+class Solution {
+
+    public boolean isAdamNumber(int s) {
+        int rev = 0;
+        int ori = s*s;
+        while(s!=0){
+            int digit = s%10;
+            rev = rev * 10 + digit;
+            s = s/10;
+        }
+        int rev1 = rev * rev;
+        int rev2 = 0;
+        while(rev1!=0){
+            int dig = rev1%10;
+            rev2 = rev2 * 10 + dig;
+            rev1 = rev1/10;
+        }
+        
+        if(ori == rev2){
+            return true;
+        }
+        return false;
+    }
+}
