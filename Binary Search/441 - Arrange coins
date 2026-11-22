@@ -1,0 +1,31 @@
+class Solution {
+    public int arrangeCoins(int n) {
+       int left = 0;
+       int right = n;
+       while(left<=right){
+       long mid = (long)left + (right - left) / 2;
+       long coins = (long)mid *(mid + 1)/2;
+       if(coins==n){
+             return (int)mid;
+       }else if(coins < n){
+             left =(int) mid + 1;
+       }else{
+             right = (int) mid - 1;
+       }
+      
+       }
+        return (int)right;
+    }
+}
+/*
+class Solution {
+    public int arrangeCoins(int n) {
+        int row = 1;
+        while(row<=n){
+           n = n - row;
+           row++;
+        }
+        return row - 1;
+    }
+}
+*/
